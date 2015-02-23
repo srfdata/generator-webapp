@@ -180,13 +180,20 @@ module.exports = yeoman.generators.Base.extend({
     this.mkdir('app/scripts');
     this.mkdir('app/styles');
     this.mkdir('app/images');
+    this.mkdir('app/fonts');
+    this.mkdir('app/data');
     this.write('app/index.html', this.indexFile);
+
+    // Copy fonts
+    this.directory('fonts', 'app/fonts');
 
     if (this.coffee) {
       this.copy('main.coffee', 'app/scripts/main.coffee');
     } else {
       this.copy('main.js', 'app/scripts/main.js');
     }
+
+
   },
 
   install: function () {
