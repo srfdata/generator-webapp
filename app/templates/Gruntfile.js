@@ -374,7 +374,9 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             'images/{,*/}*.webp',
             '{,*/}*.html',
-            'styles/fonts/{,*/}*.*'
+            'styles/fonts/{,*/}*.*',
+            'fonts/{,*/}*.*',
+            'data/{,*/}*.*'
           ]
         }<% if (includeBootstrap) { %>, {
           expand: true,
